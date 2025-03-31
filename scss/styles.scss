@@ -1,0 +1,151 @@
+@import 'default';
+
+
+.parent-preview{  
+ padding: 0;
+ margin: 0;
+ width: 100vw;
+ height: 100vh;
+ @include flex-center; 
+}
+
+
+.preview-card {
+  @include flex-center;
+  width: 60%;
+  // padding: 20%;
+  // border: 5px solid orange;
+  background-color: hsl(244, 38%, 16%);
+  // margin-left: 20%;
+  // margin-right: 20%;
+  // justify-content: space-between ;
+  border-radius: 20px;
+  
+  
+}
+
+.left-div {
+  // background-color: hsl(244, 65%, 54%);
+  // background-color: $primary-accent;
+  flex:1;
+  height: 100%;
+  
+  @include flex-center;  
+  &_parent{    
+    width: 80%;
+    // border: 2px solid pink;
+  }
+.line1{
+  // margin-bottom: 30%;
+ font-size: 1.8rem;
+ color: $secondary_color;
+ margin-bottom: 6%;
+ span{
+  color: $primary_accent;
+ }
+
+}
+
+
+
+
+.line2{
+  p{
+    color: $main_paragraph;
+    font-size: 1.2rem;
+
+  }
+}
+
+  .line3 {
+    @include flex-center;
+    justify-content: space-between;
+    margin-top: 15%;
+
+    h2{
+      color: $secondary_color;
+      margin-bottom: 12%;
+    }
+    h5 {
+      color: $main_paragraph;
+    }
+    
+  }
+}
+
+.right-div {
+  border-radius: 20px;
+  position: relative;
+  flex: 1;  
+  .image{
+    position: relative;
+    width: 100%;  
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin: 0%;  
+  } 
+
+  .overlay{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $primary_accent;
+      opacity: 0.6;
+      pointer-events: none;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+}
+
+@media (min-width: 440px) and (max-width: 880px) {
+  .preview-card{
+    @include flex-center;
+    width: 60%;
+    height: 90%;
+    flex-direction: column-reverse;
+    
+
+    .image{
+      border-top-right-radius: 20px;
+      border-top-left-radius: 20px;
+      border-bottom-right-radius: 0;
+      
+    }
+
+    .overlay{
+      border-top-right-radius: 20px;
+      border-top-left-radius: 20px;
+      border-bottom-right-radius: 0;
+      
+    }
+
+    .line1{
+      // margin-bottom: 30%;
+     font-size: 1.2rem;
+     text-align: center;
+     margin-top: 10%;
+    }
+    .line2 {
+          p{
+            font-size: 1.1rem;
+            line-height: 1.8rem;
+            text-align: center;
+          }
+    }
+    .line3 {
+      display: flex;
+      // margin: auto;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+     
+      .companies, .templates, .queries{
+        margin-bottom: 10%;
+
+      }
+
+    }
+  }
+}

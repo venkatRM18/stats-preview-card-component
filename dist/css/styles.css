@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: hsl(233, 47%, 7%);
+  Font-size: 15px;
+  font-family: sans-serif;
+}
+
+h2, h5 {
+  margin: 0%;
+}
+
+.parent-preview {
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.preview-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  background-color: hsl(244, 38%, 16%);
+  border-radius: 20px;
+}
+
+.left-div {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left-div_parent {
+  width: 80%;
+}
+.left-div .line1 {
+  font-size: 1.8rem;
+  color: hsl(0, 0%, 100%);
+  margin-bottom: 6%;
+}
+.left-div .line1 span {
+  color: hsl(277, 75%, 51%);
+}
+.left-div .line2 p {
+  color: hsla(0, 2%, 52%, 0.75);
+  font-size: 1.2rem;
+}
+.left-div .line3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15%;
+}
+.left-div .line3 h2 {
+  color: hsl(0, 0%, 100%);
+  margin-bottom: 12%;
+}
+.left-div .line3 h5 {
+  color: hsla(0, 2%, 52%, 0.75);
+}
+
+.right-div {
+  border-radius: 20px;
+  position: relative;
+  flex: 1;
+}
+.right-div .image {
+  position: relative;
+  width: 100%;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin: 0%;
+}
+.right-div .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsl(277, 75%, 51%);
+  opacity: 0.6;
+  pointer-events: none;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+@media (min-width: 400px) and (max-width: 880px) {
+  .preview-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 90%;
+    flex-direction: column-reverse;
+  }
+  .preview-card .image {
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 0;
+  }
+  .preview-card .overlay {
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 0;
+  }
+  .preview-card .line1 {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 10%;
+  }
+  .preview-card .line2 p {
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+    text-align: center;
+  }
+  .preview-card .line3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .preview-card .line3 .companies, .preview-card .line3 .templates, .preview-card .line3 .queries {
+    margin-bottom: 10%;
+  }
+}/*# sourceMappingURL=styles.css.map */

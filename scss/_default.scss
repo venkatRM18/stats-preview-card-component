@@ -1,0 +1,29 @@
+$main-background: hsl(233, 47%, 7%);
+$card-background:hsl(244, 38%, 16%);
+$primary_accent: hsl(277, 75%, 51%);
+$main_paragraph: hsla(0, 2%, 52%, 0.75);
+$secondary_color: hsl(0, 0%, 100%);
+
+
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: $main-background;
+  // color: $tertiary-color;
+  Font-size: 15px;
+  font-family: sans-serif;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+h2, h5{
+  margin: 0%;
+}
+
+
+
